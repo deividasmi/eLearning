@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html><head>
+    <title>HTML KickStart Elements</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="" />
+    <meta name="copyright" content="" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />                  <!-- KICKSTART -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                          <!-- CUSTOM STYLES -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/kickstart.js"></script>                                  <!-- KICKSTART -->
+    <title>eLearn</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content="http://localhost:3000/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="eLearn" />
+    <meta property="og:description"   content="eLearn" />
+    <meta property="og:image"         content="" />
+
+</head><body>
+
+<!-- Menu Horizontal -->
+<ul class="menu">
+    <li class="current"><a href="/">Home</a></li>
+    <li><a href="/Classes">Classes</a></li>
+
+
+</ul>
+
+<div class="grid">
+
+    <!-- ===================================== END HEADER ===================================== -->
+
+    <div class="col_12">
+        <div class="col_9">
+            {{{messages}}}
+            {{#if errors}}
+                {{#each errors}}
+                    <div class="notice error"><i class="icon-remove-sign icon-large"></i>
+                        {{msg}}
+                        <a href='#close' class="icon-remove"></a>
+                    </div>
+                {{/each}}
+            {{/if}}
+            {{{body}}}
+        </div>
+
+        <div class="col_3">
+        {{>login}}
+        </div>
+
+        <hr />
+    {{#if isHome}}
+    {{>classes}}
+    {{/if}}
+    </div>
+
+
+    <head>
+
+    </head>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/lt_LT/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-share-button" data-href="http://localhost:3000/" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bendrinti</a></div>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/lt_LT/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-comments" data-href="http://localhost:3000/" data-numposts="5"></div>
+
+</div><!-- END GRID -->
+
+<!-- ===================================== START FOOTER ===================================== -->
+<div class="clear"></div>
+<div id="footer">
+    &copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
+</div>
+
+</body></html>
