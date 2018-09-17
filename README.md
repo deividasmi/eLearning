@@ -1,3 +1,2 @@
 # eLearning
-NodeJs project for university web technologies course. eLearning systems prototype.
-Uses mongodb
+NodeJs MongoDB project for university web technologies course. Prototype of eLearning system
